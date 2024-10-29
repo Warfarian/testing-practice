@@ -6,16 +6,16 @@ let caesarCipher = (inputStr, shiftAmount) => {
         const isUpperCase = char === char.toUpperCase();
         const lowerChar = char.toLowerCase();
         
-        if (!alphabet.includes(lowerChar)) {
+        if (!alpha.includes(lowerChar)) {
             encryptedStr += char;
             continue;
         }
 
-        const originalIndex = alphabet.indexOf(lowerChar);
-        let shiftedIndex = (originalIndex + shiftAmount) % 26;
-        if (shiftedIndex < 0) shiftedIndex += 26; 
+        const originalIndex = alpha.indexOf(lowerChar);
+        let newIndex = (originalIndex + shiftAmount) % 26;
+        if (newIndex < 0) newIndex += 26; 
 
-        const shiftedChar = alphabet[shiftedIndex];
+        const shiftedChar = alpha[newIndex];
         
         if (isUpperCase) {
             encryptedStr += shiftedChar.toUpperCase();
