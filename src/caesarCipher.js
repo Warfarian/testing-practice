@@ -1,5 +1,5 @@
 let caesarCipher = (inputStr, shiftAmount) => {
-    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    const alpha = 'abcdefghijklmnopqrstuvwxyz';
     let encryptedStr = '';
 
     for (let char of inputStr) {
